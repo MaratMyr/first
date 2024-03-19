@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <meta charset="UTF-8">
+
+    {% if type == 'ol' %}
+    <ol padding-left: 40px>
+        {% for item in professions %}
+            <li>{{item}}</li>
+        {% endfor %}
+    </ol>
+    {%elif type == 'ul'%}
+    <ul padding-left: 40px>
+        {%for item in professions %}
+            <li>{{item}}</li>
+        {% endfor %}
+    </ul>
+    {%else %}
+    <p>Неверный параметр ol/ul</p>
+    {% endif%}
+
+{% endblock %}
